@@ -9,26 +9,26 @@ import App from '@/App'
 
 sync(store, router)
 
-async function start () {
-  if (loginPage) {
-    await validateLogin()
-  } else {
-    await login('', '', '')
-  }
+// async function start () {
+//   if (loginPage) {
+//     await validateLogin()
+//   } else {
+//     await login('', '', '')
+//   }
 
-  if (recaptcha) {
-    await new Promise (resolve => {
-      const check = () => {
-        if (typeof window.grecaptcha === 'undefined') {
-          setTimeout(check, 100)
-        } else {
-          resolve()
-        }
-      }
+//   if (recaptcha) {
+//     await new Promise (resolve => {
+//       const check = () => {
+//         if (typeof window.grecaptcha === 'undefined') {
+//           setTimeout(check, 100)
+//         } else {
+//           resolve()
+//         }
+//       }
 
-      check()
-    })
-  }
+//       check()
+//     })
+//   }
 
   new Vue({
     el: '#app',
@@ -38,6 +38,6 @@ async function start () {
     template: '<App/>',
     components: { App }
   })
-}
+// }
 
-start()
+// start()

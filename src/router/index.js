@@ -48,7 +48,7 @@ const router = new Router({
           name: 'Files',
           component: Files,
           meta: {
-            requiresAuth: true
+            requiresAuth: false
           }
         },
         {
@@ -59,7 +59,7 @@ const router = new Router({
             path: '/settings/profile'
           },
           meta: {
-            requiresAuth: true
+            requiresAuth: false
           },
           children: [
             {

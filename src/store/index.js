@@ -6,7 +6,20 @@ import getters from './getters'
 Vue.use(Vuex)
 
 const state = {
-  user: null,
+  user: {
+    "id": 1,
+    "username": "brandon",
+    "password": "",
+    "scope": ".",
+    "viewMode": "mosaic",
+    "sorting": {
+      "by": "name",
+      "asc": false
+    },
+    "perm": {
+      "share": true
+    }
+  },
   req: {},
   oldReq: {},
   clipboard: {
